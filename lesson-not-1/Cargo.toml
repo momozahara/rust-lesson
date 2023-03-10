@@ -1,0 +1,22 @@
+[package]
+name = "invoker"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "debug"
+path = "src/debug/lib.rs"
+crate-type = ["cdylib"]
+
+[[bin]]
+name = "collection"
+path = "src/collection/main.rs"
+
+[[bin]]
+name = "invoker"
+path = "src/main.rs"
+
+[dependencies]
+colored = "2.0.0"
+
